@@ -14,6 +14,7 @@
 		133BB8F7202B6279009C9F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133BB8F6202B6279009C9F01 /* Assets.xcassets */; };
 		133BB8FA202B6279009C9F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133BB8F8202B6279009C9F01 /* LaunchScreen.storyboard */; };
 		133BB902202B63DE009C9F01 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 133BB901202B63DE009C9F01 /* Sprites.atlas */; };
+		133BB904202B674C009C9F01 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB903202B674C009C9F01 /* Cookie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		133BB8F9202B6279009C9F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		133BB8FB202B6279009C9F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		133BB901202B63DE009C9F01 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Sprites.atlas; path = ../../../../Downloads/Resources/Sprites.atlas; sourceTree = "<group>"; };
+		133BB903202B674C009C9F01 /* Cookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				133BB8E9202B6279009C9F01 /* AppDelegate.swift */,
 				133BB8EF202B6279009C9F01 /* GameScene.swift */,
 				133BB8F1202B6279009C9F01 /* GameViewController.swift */,
+				133BB903202B674C009C9F01 /* Cookie.swift */,
 				133BB8F3202B6279009C9F01 /* Main.storyboard */,
 				133BB8F6202B6279009C9F01 /* Assets.xcassets */,
 				133BB8F8202B6279009C9F01 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				133BB8F0202B6279009C9F01 /* GameScene.swift in Sources */,
+				133BB904202B674C009C9F01 /* Cookie.swift in Sources */,
 				133BB8F2202B6279009C9F01 /* GameViewController.swift in Sources */,
 				133BB8EA202B6279009C9F01 /* AppDelegate.swift in Sources */,
 			);
