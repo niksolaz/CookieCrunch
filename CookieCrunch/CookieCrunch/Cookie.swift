@@ -37,12 +37,13 @@ enum CookieType: Int , CustomStringConvertible {
 }
 
 class Cookie: CustomStringConvertible, Hashable {
+    
     var hashValue: Int {
         return row * 10 + column
     }
     
     static func ==(lhs: Cookie, rhs: Cookie) -> Bool {
-        <#code#>
+        return lhs.column == rhs.column && lhs.row == rhs.row
     }
     
     var description: String {
