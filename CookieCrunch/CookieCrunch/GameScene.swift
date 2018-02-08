@@ -11,6 +11,7 @@ import SpriteKit
 class GameScene: SKScene {
     
     var level: Level!
+    let tilesLayer = SKNode()
     
     let TileWidth: CGFloat = 32.0
     let TileHeight: CGFloat = 36.0
@@ -39,6 +40,10 @@ class GameScene: SKScene {
         
         cookiesLayer.position = layerPosition
         gameLayer.addChild(cookiesLayer)
+        
+        tilesLayer.position = layerPosition
+        gameLayer.addChild(tilesLayer)
+
     }
     
     func addSprites(for cookies: Set<Cookie>) {
@@ -55,5 +60,18 @@ class GameScene: SKScene {
         return CGPoint(
             x: CGFloat(column)*TileWidth + TileWidth/2,
             y: CGFloat(row)*TileHeight + TileHeight/2)
+    }
+    
+    func addTiles() {
+        for row in 0..<NumRows {
+            for column in 0..<NumColumns {
+                if level.tileAt(column: column, row: row) != nil {
+                    let tileNode = SKSpriteNode(imageNamed: "Tile")
+                    tileNode.size = CGSize(width: TileWidth, height: TileHeight)
+                    tileNode.position = pointFor(column: column, row: row)
+                    tilesLayer.addChild(tileNode)
+                }
+            }
+        }
     }
 }

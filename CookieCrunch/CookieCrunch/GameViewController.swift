@@ -40,6 +40,7 @@ class GameViewController: UIViewController {
         //Call istance Level
         level = Level(filename: "Levels/Level_1")
         scene.level = level
+        scene.addTiles()
         
         // Present the scene.
         skView.presentScene(scene)
