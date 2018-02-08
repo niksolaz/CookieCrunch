@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1313F270202CB27300B9D300 /* Levels in Resources */ = {isa = PBXBuildFile; fileRef = 1313F26F202CB27300B9D300 /* Levels */; };
 		133BB8EA202B6279009C9F01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB8E9202B6279009C9F01 /* AppDelegate.swift */; };
 		133BB8F0202B6279009C9F01 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB8EF202B6279009C9F01 /* GameScene.swift */; };
 		133BB8F2202B6279009C9F01 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB8F1202B6279009C9F01 /* GameViewController.swift */; };
@@ -17,9 +18,12 @@
 		133BB904202B674C009C9F01 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB903202B674C009C9F01 /* Cookie.swift */; };
 		133BB906202B6FAB009C9F01 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB905202B6FAB009C9F01 /* Array2D.swift */; };
 		139AD7E8202C94BE00733FB5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139AD7E7202C94BE00733FB5 /* Level.swift */; };
+		139AD7EE202CAD1D00733FB5 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139AD7ED202CAD1D00733FB5 /* Tile.swift */; };
+		139AD7F0202CAE1600733FB5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139AD7EF202CAE1600733FB5 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1313F26F202CB27300B9D300 /* Levels */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Levels; path = ../../../../Downloads/Resources/Levels; sourceTree = "<group>"; };
 		133BB8E6202B6279009C9F01 /* CookieCrunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookieCrunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		133BB8E9202B6279009C9F01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		133BB8EF202B6279009C9F01 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		133BB903202B674C009C9F01 /* Cookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 		133BB905202B6FAB009C9F01 /* Array2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 		139AD7E7202C94BE00733FB5 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		139AD7ED202CAD1D00733FB5 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		139AD7EF202CAE1600733FB5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,7 @@
 		133BB8DD202B6279009C9F01 = {
 			isa = PBXGroup;
 			children = (
+				1313F26F202CB27300B9D300 /* Levels */,
 				133BB901202B63DE009C9F01 /* Sprites.atlas */,
 				133BB8E8202B6279009C9F01 /* CookieCrunch */,
 				133BB8E7202B6279009C9F01 /* Products */,
@@ -75,6 +82,8 @@
 				133BB8F6202B6279009C9F01 /* Assets.xcassets */,
 				133BB8F8202B6279009C9F01 /* LaunchScreen.storyboard */,
 				133BB8FB202B6279009C9F01 /* Info.plist */,
+				139AD7ED202CAD1D00733FB5 /* Tile.swift */,
+				139AD7EF202CAE1600733FB5 /* Extensions.swift */,
 			);
 			path = CookieCrunch;
 			sourceTree = "<group>";
@@ -138,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1313F270202CB27300B9D300 /* Levels in Resources */,
 				133BB902202B63DE009C9F01 /* Sprites.atlas in Resources */,
 				133BB8F5202B6279009C9F01 /* Main.storyboard in Resources */,
 				133BB8F7202B6279009C9F01 /* Assets.xcassets in Resources */,
@@ -155,6 +165,8 @@
 				139AD7E8202C94BE00733FB5 /* Level.swift in Sources */,
 				133BB8F0202B6279009C9F01 /* GameScene.swift in Sources */,
 				133BB904202B674C009C9F01 /* Cookie.swift in Sources */,
+				139AD7F0202CAE1600733FB5 /* Extensions.swift in Sources */,
+				139AD7EE202CAD1D00733FB5 /* Tile.swift in Sources */,
 				133BB8F2202B6279009C9F01 /* GameViewController.swift in Sources */,
 				133BB8EA202B6279009C9F01 /* AppDelegate.swift in Sources */,
 				133BB906202B6FAB009C9F01 /* Array2D.swift in Sources */,

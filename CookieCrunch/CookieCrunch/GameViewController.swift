@@ -33,13 +33,13 @@ class GameViewController: UIViewController {
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false
         
-        //Call istance Level
-        level = Level()
-        scene.level = level
-        
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .aspectFill
+        
+        //Call istance Level
+        level = Level(filename: "Levels/Level_1")
+        scene.level = level
         
         // Present the scene.
         skView.presentScene(scene)
