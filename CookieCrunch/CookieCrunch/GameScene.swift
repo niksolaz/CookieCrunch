@@ -38,12 +38,12 @@ class GameScene: SKScene {
             x: -TileWidth * CGFloat(NumColumns) / 2,
             y: -TileHeight * CGFloat(NumRows) / 2)
         
+        tilesLayer.position = layerPosition
+        gameLayer.addChild(tilesLayer)
+        
         cookiesLayer.position = layerPosition
         gameLayer.addChild(cookiesLayer)
         
-        tilesLayer.position = layerPosition
-        gameLayer.addChild(tilesLayer)
-
     }
     
     func addSprites(for cookies: Set<Cookie>) {
