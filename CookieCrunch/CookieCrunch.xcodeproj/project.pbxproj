@@ -17,6 +17,7 @@
 		133BB902202B63DE009C9F01 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 133BB901202B63DE009C9F01 /* Sprites.atlas */; };
 		133BB904202B674C009C9F01 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB903202B674C009C9F01 /* Cookie.swift */; };
 		133BB906202B6FAB009C9F01 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133BB905202B6FAB009C9F01 /* Array2D.swift */; };
+		136FDB9F20308AA7003C9F56 /* Swap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FDB9E20308AA7003C9F56 /* Swap.swift */; };
 		139AD7E8202C94BE00733FB5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139AD7E7202C94BE00733FB5 /* Level.swift */; };
 		139AD7EE202CAD1D00733FB5 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139AD7ED202CAD1D00733FB5 /* Tile.swift */; };
 		139AD7F0202CAE1600733FB5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139AD7EF202CAE1600733FB5 /* Extensions.swift */; };
@@ -35,6 +36,7 @@
 		133BB901202B63DE009C9F01 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Sprites.atlas; path = ../../../../Downloads/Resources/Sprites.atlas; sourceTree = "<group>"; };
 		133BB903202B674C009C9F01 /* Cookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 		133BB905202B6FAB009C9F01 /* Array2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
+		136FDB9E20308AA7003C9F56 /* Swap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swap.swift; sourceTree = "<group>"; };
 		139AD7E7202C94BE00733FB5 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		139AD7ED202CAD1D00733FB5 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		139AD7EF202CAE1600733FB5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				133BB8FB202B6279009C9F01 /* Info.plist */,
 				139AD7ED202CAD1D00733FB5 /* Tile.swift */,
 				139AD7EF202CAE1600733FB5 /* Extensions.swift */,
+				136FDB9E20308AA7003C9F56 /* Swap.swift */,
 			);
 			path = CookieCrunch;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				133BB8F2202B6279009C9F01 /* GameViewController.swift in Sources */,
 				133BB8EA202B6279009C9F01 /* AppDelegate.swift in Sources */,
 				133BB906202B6FAB009C9F01 /* Array2D.swift in Sources */,
+				136FDB9F20308AA7003C9F56 /* Swap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
