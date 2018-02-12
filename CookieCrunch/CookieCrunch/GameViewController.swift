@@ -67,6 +67,7 @@ class GameViewController: UIViewController {
         movesLeft = maximumMoves
         score = 0
         updateLabels()
+        level.resetComboMultiplier()
         shuffle()
     }
     
@@ -110,6 +111,7 @@ class GameViewController: UIViewController {
     }
     
     func beginNextTurn() {
+        level.resetComboMultiplier()
         level.detectPossibleSwaps()
         view.isUserInteractionEnabled = true
     }
