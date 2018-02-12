@@ -8,26 +8,46 @@
 
 import UIKit
 import SpriteKit
-
+import AVFoundation
 
 
 class GameViewController: UIViewController {
     
+    var scene: GameScene!
+    var level: Level!
+    // Properties for scoring
     var movesLeft = 0
     var score = 0
     
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var movesLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    // Display the game over banner
     @IBOutlet weak var gameOverPanel: UIImageView!
+    // Give the user an ability to re-shuffle the board
     @IBOutlet weak var shuffleButton: UIButton!
+    // Action for when the user clicks the shuffle button
+    @IBAction func shuffleButtonPressed(_ sender: Any) {
+        shuffle()
+        decrementMoves()
+    }
     
-    
+    // Will detect game over and re-start
     var tapGestureRecognizer: UITapGestureRecognizer!
-    
-    var scene: GameScene!
-    
-    var level: Level!
+    // Lazy loaded property for audio
+    lazy var backgroundMusic: AVAudioPlayer? = {
+        guard let url = Bundle.main.url(forResource: "Mining by Moonlight", withExtension: "mp3") else {
+            return nil
+        }
+        do {
+            let player = try AVAudioPlayer(contentsOf: url)
+            player.numberOfLoops = -1
+            return player
+        } catch {
+            return nil
+        }
+    }()
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -48,8 +68,6 @@ class GameViewController: UIViewController {
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false
         
-        
-        
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .aspectFill
@@ -67,6 +85,7 @@ class GameViewController: UIViewController {
         // Present the scene.
         skView.presentScene(scene)
         
+        backgroundMusic?.play()
         beginGame()
         
     }
@@ -169,8 +188,4 @@ class GameViewController: UIViewController {
         beginGame()
     }
     
-    @IBAction func shuffleButtonPressed(_: AnyObject) {
-        shuffle()
-        decrementMoves()
-    }
 }
