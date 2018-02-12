@@ -192,6 +192,25 @@ class GameScene: SKScene {
         spriteB.run(moveB)
     }
     
+    func animateInvalidSwap(_ swap: Swap, completion: @escaping () -> ()) {
+        let spriteA = swap.cookieA.sprite!
+        let spriteB = swap.cookieB.sprite!
+        
+        spriteA.zPosition = 100
+        spriteB.zPosition = 90
+        
+        let duration: TimeInterval = 0.2
+        
+        let moveA = SKAction.move(to: spriteB.position, duration: duration)
+        moveA.timingMode = .easeOut
+        
+        let moveB = SKAction.move(to: spriteA.position, duration: duration)
+        moveB.timingMode = .easeOut
+        
+        spriteA.run(SKAction.sequence([moveA, moveB]), completion: completion)
+        spriteB.run(SKAction.sequence([moveB, moveA]))
+    }
+    
     func showSelectionIndicatorForCookie(cookie: Cookie) {
         if selectionSprite.parent != nil {
             selectionSprite.removeFromParent()
