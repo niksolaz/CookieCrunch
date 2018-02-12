@@ -93,6 +93,7 @@ class GameViewController: UIViewController {
     }
     
     func beginNextTurn() {
+        level.detectPossibleSwaps()
         view.isUserInteractionEnabled = true
     }
 }
