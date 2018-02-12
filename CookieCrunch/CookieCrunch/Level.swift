@@ -267,6 +267,9 @@ class Level {
         removeCookies(chains: horizontalChains)
         removeCookies(chains: verticalChains)
         
+        calculateScores(for: horizontalChains)
+        calculateScores(for: verticalChains)
+        
         return horizontalChains.union(verticalChains)
     }
     
@@ -341,6 +344,13 @@ class Level {
             }
         }
         return columns
+    }
+    
+    private func calculateScores(for chains: Set<Chain>) {
+        // 3-chain is 60 pts, 4-chain is 120, 5-chain is 180, and so on
+        for chain in chains {
+            chain.score = 60 * (chain.length - 2)
+        }
     }
 }
 
