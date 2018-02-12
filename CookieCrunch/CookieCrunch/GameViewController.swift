@@ -49,6 +49,8 @@ class GameViewController: UIViewController {
         }
     }()
     
+    //var currentLevelNum = 1
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -63,6 +65,12 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup view with level 1
+        //setupLevel(levelNum: currentLevelNum)
+        
+        // Start the background music.
+        backgroundMusic?.play()
         
         // Configure the view.
         let skView = view as! SKView
@@ -159,6 +167,7 @@ class GameViewController: UIViewController {
         updateLabels()
         if score >= targetScore {
             gameOverPanel.image = UIImage(named: "LevelComplete")
+            //currentLevelNum = currentLevelNum < NumLevels ? currentLevelNum+1 : 1
             showGameOver()
         } else if movesLeft == 0 {
             gameOverPanel.image = UIImage(named: "GameOver")
@@ -185,7 +194,33 @@ class GameViewController: UIViewController {
         gameOverPanel.isHidden = true
         scene.isUserInteractionEnabled = true
         
+        //setupLevel(levelNum: currentLevelNum)
         beginGame()
     }
-    
+    /*
+    func setupLevel(levelNum: Int) {
+        let skView = view as! SKView
+        skView.isMultipleTouchEnabled = false
+        
+        // Create and configure the scene.
+        scene = GameScene(size: skView.bounds.size)
+        scene.scaleMode = .aspectFill
+        
+        // Setup the level.
+        level = Level(filename: "Level_\(levelNum)")
+        scene.level = level
+        
+        scene.addTiles()
+        scene.swipeHandler = handleSwipe
+        
+        gameOverPanel.isHidden = true
+        shuffleButton.isHidden = true
+        
+        // Present the scene.
+        skView.presentScene(scene)
+        
+        // Start the game.
+        beginGame()
+    }
+   */
 }

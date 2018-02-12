@@ -16,7 +16,7 @@ var targetScore = 0
 var maximumMoves = 0
 
 private var comboMultiplier = 0
-
+//let NumLevels = 4
 
 class Level {
     fileprivate var cookies = Array2D<Cookie>(columns: NumColumns, rows: NumRows)

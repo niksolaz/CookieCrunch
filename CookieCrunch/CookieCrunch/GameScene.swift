@@ -26,6 +26,7 @@ class GameScene: SKScene {
     
     var selectionSprite = SKSpriteNode()
     
+    
     let swapSound = SKAction.playSoundFileNamed("Chomp.wav", waitForCompletion: false)
     let invalidSwapSound = SKAction.playSoundFileNamed("Error.wav", waitForCompletion: false)
     let matchSound = SKAction.playSoundFileNamed("Ka-Ching.wav", waitForCompletion: false)
@@ -54,6 +55,7 @@ class GameScene: SKScene {
             y: -TileHeight * CGFloat(NumRows) / 2)
         
         tilesLayer.position = layerPosition
+        
         gameLayer.addChild(tilesLayer)
         
         cookiesLayer.position = layerPosition
@@ -116,6 +118,7 @@ class GameScene: SKScene {
                 }
             }
         }
+        
     }
     // Add swipe methods
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
