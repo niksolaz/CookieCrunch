@@ -12,6 +12,9 @@ let NumColumns = 9
 let NumRows = 9
 private var possibleSwaps = Set<Swap>()
 
+var targetScore = 0
+var maximumMoves = 0
+
 
 class Level {
     fileprivate var cookies = Array2D<Cookie>(columns: NumColumns, rows: NumRows)
@@ -88,6 +91,9 @@ class Level {
                 }
             }
         }
+        
+        targetScore = dictionary["targetScore"] as! Int
+        maximumMoves = dictionary["moves"] as! Int
     }
     
     func performSwap(swap: Swap) {

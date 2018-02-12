@@ -9,7 +9,17 @@
 import UIKit
 import SpriteKit
 
+
+
 class GameViewController: UIViewController {
+    
+    var movesLeft = 0
+    var score = 0
+    
+    @IBOutlet weak var targetLabel: UILabel!
+    @IBOutlet weak var movesLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     var scene: GameScene!
     
     var level: Level!
@@ -54,6 +64,9 @@ class GameViewController: UIViewController {
     }
     
     func beginGame() {
+        movesLeft = maximumMoves
+        score = 0
+        updateLabels()
         shuffle()
     }
     
@@ -95,5 +108,11 @@ class GameViewController: UIViewController {
     func beginNextTurn() {
         level.detectPossibleSwaps()
         view.isUserInteractionEnabled = true
+    }
+    
+    func updateLabels() {
+        targetLabel.text = String(format: "%ld", targetScore)
+        movesLabel.text = String(format: "%ld", movesLeft)
+        scoreLabel.text = String(format: "%ld", score)
     }
 }
