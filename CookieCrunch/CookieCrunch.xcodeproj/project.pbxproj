@@ -24,6 +24,7 @@
 		13EDB90D20319C4800399B14 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 13EDB90C20319C4800399B14 /* Sounds */; };
 		13EDB90F20319C6900399B14 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 13EDB90E20319C6900399B14 /* Images */; };
 		13EDB91120319C7000399B14 /* Grid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 13EDB91020319C7000399B14 /* Grid.atlas */; };
+		13EDB9132031CE7300399B14 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EDB9122031CE7300399B14 /* Chain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		13EDB90C20319C4800399B14 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = ../../../../Downloads/Resources/Sounds; sourceTree = "<group>"; };
 		13EDB90E20319C6900399B14 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = ../../../../Downloads/Resources/Images; sourceTree = "<group>"; };
 		13EDB91020319C7000399B14 /* Grid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Grid.atlas; path = ../../../../Downloads/Resources/Grid.atlas; sourceTree = "<group>"; };
+		13EDB9122031CE7300399B14 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				139AD7ED202CAD1D00733FB5 /* Tile.swift */,
 				139AD7EF202CAE1600733FB5 /* Extensions.swift */,
 				136FDB9E20308AA7003C9F56 /* Swap.swift */,
+				13EDB9122031CE7300399B14 /* Chain.swift */,
 			);
 			path = CookieCrunch;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				133BB904202B674C009C9F01 /* Cookie.swift in Sources */,
 				139AD7F0202CAE1600733FB5 /* Extensions.swift in Sources */,
 				139AD7EE202CAD1D00733FB5 /* Tile.swift in Sources */,
+				13EDB9132031CE7300399B14 /* Chain.swift in Sources */,
 				133BB8F2202B6279009C9F01 /* GameViewController.swift in Sources */,
 				133BB8EA202B6279009C9F01 /* AppDelegate.swift in Sources */,
 				133BB906202B6FAB009C9F01 /* Array2D.swift in Sources */,
