@@ -21,6 +21,9 @@
 		139AD7E8202C94BE00733FB5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139AD7E7202C94BE00733FB5 /* Level.swift */; };
 		139AD7EE202CAD1D00733FB5 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139AD7ED202CAD1D00733FB5 /* Tile.swift */; };
 		139AD7F0202CAE1600733FB5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139AD7EF202CAE1600733FB5 /* Extensions.swift */; };
+		13EDB90D20319C4800399B14 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 13EDB90C20319C4800399B14 /* Sounds */; };
+		13EDB90F20319C6900399B14 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 13EDB90E20319C6900399B14 /* Images */; };
+		13EDB91120319C7000399B14 /* Grid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 13EDB91020319C7000399B14 /* Grid.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		139AD7E7202C94BE00733FB5 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		139AD7ED202CAD1D00733FB5 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		139AD7EF202CAE1600733FB5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		13EDB90C20319C4800399B14 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = ../../../../Downloads/Resources/Sounds; sourceTree = "<group>"; };
+		13EDB90E20319C6900399B14 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = ../../../../Downloads/Resources/Images; sourceTree = "<group>"; };
+		13EDB91020319C7000399B14 /* Grid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Grid.atlas; path = ../../../../Downloads/Resources/Grid.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		133BB8DD202B6279009C9F01 = {
 			isa = PBXGroup;
 			children = (
+				13EDB91020319C7000399B14 /* Grid.atlas */,
+				13EDB90E20319C6900399B14 /* Images */,
+				13EDB90C20319C4800399B14 /* Sounds */,
 				1313F26F202CB27300B9D300 /* Levels */,
 				133BB901202B63DE009C9F01 /* Sprites.atlas */,
 				133BB8E8202B6279009C9F01 /* CookieCrunch */,
@@ -150,7 +159,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13EDB90D20319C4800399B14 /* Sounds in Resources */,
 				1313F270202CB27300B9D300 /* Levels in Resources */,
+				13EDB90F20319C6900399B14 /* Images in Resources */,
+				13EDB91120319C7000399B14 /* Grid.atlas in Resources */,
 				133BB902202B63DE009C9F01 /* Sprites.atlas in Resources */,
 				133BB8F5202B6279009C9F01 /* Main.storyboard in Resources */,
 				133BB8F7202B6279009C9F01 /* Assets.xcassets in Resources */,
