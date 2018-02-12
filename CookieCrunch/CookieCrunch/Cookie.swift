@@ -63,7 +63,7 @@ class Cookie: CustomStringConvertible, Hashable {
 }
 
 func == (lhs: Cookie?, rhs: Cookie?) -> Bool {
-    return lhs!.column == rhs!.column && lhs!.row == rhs!.row
+    return lhs?.column == rhs?.column && lhs?.row == rhs?.row
 }
 
 
