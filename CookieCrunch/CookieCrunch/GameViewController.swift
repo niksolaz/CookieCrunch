@@ -74,12 +74,14 @@ class GameViewController: UIViewController {
         score = 0
         updateLabels()
         level.resetComboMultiplier()
+        scene.animateBeginGame() { }
         shuffle()
     }
     
     func shuffle() {
         let newCookies = level.shuffle()
         scene.addSprites(for: newCookies)
+        scene.removeAllCookieSprites()
     }
     
     func handleSwipe(_ swap: Swap) {
@@ -145,11 +147,13 @@ class GameViewController: UIViewController {
         gameOverPanel.isHidden = false
         scene.isUserInteractionEnabled = false
         
-        self.tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.showGameOver))
-        self.view.addGestureRecognizer(self.tapGestureRecognizer)
+        scene.animateGameOver() {
+            self.tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideGameOver))
+            self.view.addGestureRecognizer(self.tapGestureRecognizer)
+        }
     }
     
-    func hideGameOver() {
+    @objc func hideGameOver() {
         view.removeGestureRecognizer(tapGestureRecognizer)
         tapGestureRecognizer = nil
         
