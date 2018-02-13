@@ -23,18 +23,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var movesLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
-    // Display the game over banner
-    @IBOutlet weak var gameOverPanel: UIImageView!
-    // Give the user an ability to re-shuffle the board
-    @IBOutlet weak var shuffleButton: UIButton!
-    // Action for when the user clicks the shuffle button
-    @IBAction func shuffleButtonPressed(_ sender: Any) {
-        shuffle()
-        decrementMoves()
-    }
-    
-    // Will detect game over and re-start
-    var tapGestureRecognizer: UITapGestureRecognizer!
     // Lazy loaded property for audio
     lazy var backgroundMusic: AVAudioPlayer? = {
         guard let url = Bundle.main.url(forResource: "Mining by Moonlight", withExtension: "mp3") else {
@@ -87,9 +75,6 @@ class GameViewController: UIViewController {
         
         scene.swipeHandler = handleSwipe
         
-        // Hide the game over imageview
-        gameOverPanel.isHidden = true
-        
         // Present the scene.
         skView.presentScene(scene)
         
@@ -103,16 +88,12 @@ class GameViewController: UIViewController {
         score = 0
         updateLabels()
         level.resetComboMultiplier()
-        scene.animateBeginGame() {
-            self.shuffleButton.isHidden = false
-        }
         shuffle()
     }
     
     func shuffle() {
         let newCookies = level.shuffle()
         scene.addSprites(for: newCookies)
-        scene.removeAllCookieSprites()
     }
     
     func handleSwipe(_ swap: Swap) {
@@ -165,62 +146,6 @@ class GameViewController: UIViewController {
     func decrementMoves() {
         movesLeft -= 1
         updateLabels()
-        if score >= targetScore {
-            gameOverPanel.image = UIImage(named: "LevelComplete")
-            //currentLevelNum = currentLevelNum < NumLevels ? currentLevelNum+1 : 1
-            showGameOver()
-        } else if movesLeft == 0 {
-            gameOverPanel.image = UIImage(named: "GameOver")
-            showGameOver()
-        }
     }
     
-    @objc func showGameOver() {
-        gameOverPanel.isHidden = false
-        scene.isUserInteractionEnabled = false
-        
-        shuffleButton.isHidden = true
-        
-        scene.animateGameOver() {
-            self.tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideGameOver))
-            self.view.addGestureRecognizer(self.tapGestureRecognizer)
-        }
-    }
-    
-    @objc func hideGameOver() {
-        view.removeGestureRecognizer(tapGestureRecognizer)
-        tapGestureRecognizer = nil
-        
-        gameOverPanel.isHidden = true
-        scene.isUserInteractionEnabled = true
-        
-        //setupLevel(levelNum: currentLevelNum)
-        beginGame()
-    }
-    /*
-    func setupLevel(levelNum: Int) {
-        let skView = view as! SKView
-        skView.isMultipleTouchEnabled = false
-        
-        // Create and configure the scene.
-        scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .aspectFill
-        
-        // Setup the level.
-        level = Level(filename: "Level_\(levelNum)")
-        scene.level = level
-        
-        scene.addTiles()
-        scene.swipeHandler = handleSwipe
-        
-        gameOverPanel.isHidden = true
-        shuffleButton.isHidden = true
-        
-        // Present the scene.
-        skView.presentScene(scene)
-        
-        // Start the game.
-        beginGame()
-    }
-   */
 }

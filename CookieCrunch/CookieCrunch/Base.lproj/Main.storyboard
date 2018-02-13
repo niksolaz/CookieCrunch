@@ -90,49 +90,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ryo-Us-e63">
-                                <rect key="frame" x="0.0" y="269" width="375" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="225" id="dSZ-8a-n9t"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egv-dH-thB">
-                                <rect key="frame" x="125.5" y="617" width="125" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.23108008860000001" blue="0.94884983109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="1Us-L9-5SM"/>
-                                    <constraint firstAttribute="width" constant="125" id="43H-oW-r2s"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="E2w-Km-5lT"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="158" id="rON-4p-iqA"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="158" id="sNR-2Q-MvS"/>
-                                    <constraint firstAttribute="height" constant="30" id="ubl-w3-ZOi"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="0.0" height="2"/>
-                                <state key="normal" title="Shuffle" backgroundImage="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="shuffleButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="O4G-Dm-gBa"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="Egv-dH-thB" secondAttribute="bottom" constant="20" id="2rv-nV-Ach"/>
                             <constraint firstItem="0cy-S3-ESR" firstAttribute="width" secondItem="3se-qz-xqx" secondAttribute="height" multiplier="237:667" id="51j-z4-w7o"/>
-                            <constraint firstItem="Ryo-Us-e63" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="9PU-IJ-FVH"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="0cy-S3-ESR" secondAttribute="bottom" constant="594" id="BCM-8s-n4p"/>
-                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="Ryo-Us-e63" secondAttribute="trailing" id="gbJ-O1-FFX"/>
                             <constraint firstItem="0cy-S3-ESR" firstAttribute="centerX" secondItem="4qk-I5-YsI" secondAttribute="centerX" id="mWX-SX-2YP"/>
-                            <constraint firstItem="Egv-dH-thB" firstAttribute="centerX" secondItem="4qk-I5-YsI" secondAttribute="centerX" id="vwB-ef-V6D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <connections>
-                        <outlet property="gameOverPanel" destination="Ryo-Us-e63" id="Q2j-tx-aII"/>
                         <outlet property="movesLabel" destination="jU6-NC-jos" id="AeW-qR-B9X"/>
                         <outlet property="scoreLabel" destination="RaT-iO-WqM" id="0K4-wS-j8h"/>
-                        <outlet property="shuffleButton" destination="Egv-dH-thB" id="lDX-am-SLb"/>
                         <outlet property="targetLabel" destination="g19-rq-b6A" id="1Gx-hg-Rho"/>
                     </connections>
                 </viewController>
@@ -141,7 +109,4 @@
             <point key="canvasLocation" x="116" y="117.39130434782609"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Button" width="100" height="36"/>
-    </resources>
 </document>
